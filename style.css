@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin';
+}
+
+:root{
+    --Blue-200: hsl(223, 97%, 72%);
+    --Blue-500: hsl(223, 87%, 63%);
+    --Blue-950: hsl(209, 33%, 12%);
+    --Red-400: hsl(354, 54%, 52%);
+    --Gray-400: hsl(0, 0%, 59%);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 90px;
+    .logo{
+        scale: 1.05;
+    }
+    h1{
+        color: var(--Gray-400);
+        font-size: 51px;
+        font-weight: 300;
+        margin-top: 50px;
+        span{
+            color: black;
+            font-weight: 700;
+        }
+    }
+    h2{
+        opacity: 60%;
+        font-size: 21px;
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    .df{
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        margin-top: 44px;
+        input{
+            width: 450px;
+            height: 60px;
+            border: 2px solid hsl(0, 0%, 59%, 37%);
+            border-radius: 50px;
+            padding-left: 30px;
+            outline: none;
+        }
+        input::placeholder{
+            font-size: 17px;
+            color: hsl(0, 0%, 59%, 37%);
+        }
+        button{
+            background-color: var(--Blue-500);
+            border: none;
+            width: 215px;
+            height: 60px;
+            border-radius: 50px;
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 5px 10px hsla(223, 97%, 72%, 0.292);
+        }
+        button:hover{
+            background-color: var(--Blue-200);
+        }
+    }
+    p{
+        display: none;
+        align-self: start;
+        margin-top: 8px;
+        margin-left: 43px;
+        font-size: 12px;
+        color: var(--Red-400);
+        font-style: italic;
+        font-weight: 600;
+        opacity: 70%;
+    }
+    .illustration{
+        width: 680px;
+        margin-top: 90px;
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 75px;
+        .border{
+            border: 1px solid rgba(223, 222, 222, 0.45);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            img{
+                filter: brightness(0) saturate(100%) invert(26%) sepia(87%) saturate(1858%) hue-rotate(198deg) brightness(93%) contrast(105%);
+                width: 17px;
+            }
+        }
+        .border:hover{
+            background-color: var(--Blue-500);
+            border: none;
+            img{
+                filter: none;
+            }
+        }
+    }
+    h3{
+        color: var(--Gray-400);
+        opacity: 50%;
+        font-size: 12px;
+        margin: 25px 0 50px 0;
+    }
+}
+
+@media screen and (max-width: 720px){
+    main{
+        width: 100%;
+        h1{
+            font-size: 30px;
+        }
+        h2{
+            font-size: 15px;
+        }
+        .df{
+            width: 80%;
+            flex-direction: column;
+            input{
+                width: 100%;
+                height: 40px;
+            }
+            input::placeholder{
+                font-size: 13px;
+            }
+            button{
+                width: 100%;
+                height: 40px;
+            }
+        }
+        .illustration{
+            width: 80%;
+        }
+    }
+}
